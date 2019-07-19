@@ -6,7 +6,8 @@
     //Assign position received
     function onPositionReceived(position){
         console.log(position);
-        $.get( "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude +"&key=AIzaSyC1L4ozX5tsNlqWnPuJ0QoEf_CH7jDPlJI",
+        //Removed the API key
+        $.get( "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude +"",
             function(location) {
                 console.log(location);
             add.value = location.results[6].formatted_address;
